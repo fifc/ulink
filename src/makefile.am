@@ -1,0 +1,10 @@
+
+LD=gcc
+bin_PROGRAMS = ulink
+ulink_SOURCES = client.c main.c ulink.c server.c util.c
+include_HEADERS = defs.h ulink.h
+ulink_CPPFLAGS =
+ulink_CFLAGS = -DHAVE_UNISTD_H -I/u/include -pthread
+ulink_LDFLAGS = -pthread -L/u/lib -ldl
+ulink_LDADD = -luv
+
