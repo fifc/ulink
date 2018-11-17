@@ -28,6 +28,7 @@ static void pr_do(FILE *stream,
                   const char *fmt,
                   va_list ap);
 
+const char *_getprogname(void);
 void pr_err(const char *fmt, ...);
 
 void *xmalloc(size_t size) {
